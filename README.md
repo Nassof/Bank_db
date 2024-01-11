@@ -1,6 +1,7 @@
 ## Bank DB
 
-Objective: clean and store the data they collected as part of a recent marketing campaign, which aimed to get customers to take out a personal loan. 
+Objective: 
+Clean and store the data they collected as part of a recent marketing campaign, which aimed to get customers to take out a personal loan. 
 In order to conduct more marketing campaigns, set up a PostgreSQL database to store this campaign's data, designing the schema in a way that would allow data from future campaigns to be easily imported.
 
 "bank_marketing.csv", needs to be cleaned, reformat, and split, in order to save separate files based on the tables you will create. `pandas` will be used for these tasks.
