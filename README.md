@@ -1,14 +1,15 @@
 Bank DB
 
-# Objective: clean and store the data they collected as part of a recent marketing campaign, which aimed to get customers to take out a personal loan. 
+Objective: clean and store the data they collected as part of a recent marketing campaign, which aimed to get customers to take out a personal loan. 
 In order to conduct more marketing campaigns, set up a PostgreSQL database to store this campaign's data, designing the schema in a way that would allow data from future campaigns to be easily imported.
 
-# `"bank_marketing.csv"`, needs to be cleaned, reformat, and split, in order to save separate files based on the tables you will create. `pandas` will be used for these tasks.
+"bank_marketing.csv"`, needs to be cleaned, reformat, and split, in order to save separate files based on the tables you will create. `pandas` will be used for these tasks.
 
-# Lastly, you will write the SQL code that the bank can execute to create the tables and populate with the data from the csv files. As the bank are quite strict about their security, you'll save SQL files as multiline string variables that they can then use to create the database on their end.
-# Design a database that will have three tables:
+Lastly, you will write the SQL code that the bank can execute to create the tables and populate with the data from the csv files. As the bank are quite strict about their security, you'll save SQL files as multiline string variables that they can then use to create the database on their end.
 
-# client #
+### Design a database with three tables:
+
+### client 
 
 | column | data type | description | original column in dataset |
 |--------|-----------|-------------|----------------------------|
@@ -22,7 +23,7 @@ In order to conduct more marketing campaigns, set up a PostgreSQL database to st
 | `loan` | `boolean` | Whether the client has an existing perasonal loan | `loan` |
 
 
-# campaign # 
+### campaign
 
 | column | data type | description | original column in dataset |
 |--------|-----------|-------------|----------------------------|
@@ -37,7 +38,7 @@ In order to conduct more marketing campaigns, set up a PostgreSQL database to st
 | `last_contact_date` | `date` | Last date the client was contacted | A combination of `day`, `month`, and the newly created `year` |
 
 
-# economics #
+### economics 
 
 | column | data type | description | original column in dataset |
 |--------|-----------|-------------|----------------------------|
