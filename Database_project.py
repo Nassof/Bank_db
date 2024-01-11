@@ -11,7 +11,7 @@ economics = pd.DataFrame(df[["client_id", "emp_var_rate", "cons_price_idx", "eur
 
 client = client.rename(columns={"client_id": "id", "col2": "col_two"})
 
-# renaming columns
+# renaming columns / renommer colonnes
 client = client.rename(columns = {"client_id":"id"})
 campaign = campaign.rename(columns= {"duration":"contact_duration", 
                                      "previous":"previous_campaign_contacts", 
@@ -21,12 +21,12 @@ campaign = campaign.rename(columns= {"duration":"contact_duration",
 economics = economics.rename(columns= {"euribor3m":"euribor_three_months",
                                        "nr_employed":"number_employed"})
 
-# cleaning data
+# cleaning data / nettoyage des données
 client['education'] = client['education'].str.replace('.','-').replace('unknown',np.NaN)
 campaign['campaign_outcome'] = campaign['campaign_outcome'].replace('yes',1).replace('no',0)
 campaign['previous_outcome'] = campaign['previous_outcome'].replace('nonexistent',np.NaN)
 
-# creating new columns
+# creating new columns / créer nouvelles colonnes
 campaign['month'] = campaign['month'].str.capitalize()
 campaign['year'] = "2022"
 campaign['day'] = campaign['day'].astype(str)
@@ -34,15 +34,15 @@ campaign['last_contact_date'] = campaign['year']+'-'+campaign['month']+'-'+ camp
 campaign['last_contact_date'] = pd.to_datetime(campaign['last_contact_date'],format='%Y-%b-%d')
 campaign['campaign_id'] = 1
 
-# droping columns
+# droping columns / supprimer colonnes
 campaign = campaign.drop(columns = ['month','day','year'])
 
-# saving data
+# saving data / sauvegarder données 
 client.to_csv("client.csv", index=False)
 campaign.to_csv("campaign.csv", index=False)
 economics.to_csv("economics.csv", index=False)
 
-### creating the tables ### 
+### creating the tables / creation de tables ### 
 
 # client table
 client_table = """
