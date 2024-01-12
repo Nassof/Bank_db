@@ -6,7 +6,7 @@ The exercice is to set up a PostgreSQL database to store this campaign's data, d
 
 "bank_marketing.csv", needs to be cleaned, reformat, and split, in order to save separate files based on the tables created. `pandas` will be used for these tasks.
 
-Lastly, i'll provide e the SQL code that the bank can execute to create the tables and populate with the data from the csv files. 
+Lastly, SQL code will be provided so that the bank can execute to create the tables and populate with the data from the csv files. 
 
 As the bank are quite strict about their security, the SQL files are presented as multiline string variables in order to be used to create a database.
 
